@@ -1,0 +1,130 @@
+/* General Container */
+.heroGrid {
+  background-color: #1e293b;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .heroGrid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+/* Text Section */
+.heroText {
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .heroText {
+    text-align: left;
+  }
+}
+
+.heroTitle {
+  color: #f3f4f6;
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .heroTitle {
+    font-size: 3rem;
+    margin-left: auto;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(to right, #3b82f6, #ec4899, #9ca3af);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDescription {
+  color: white;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .heroDescription {
+    font-size: 1.25rem;
+  }
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .heroButtons {
+    flex-direction: row;
+  }
+}
+
+.button {
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom right, #3b82f6, #ec4899, #9ca3af);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #2b4985;
+  transform: translateY(-2px);
+}
+
+.download-cv .cv-inner-button {
+  display: block;
+  background: #1f2937;
+  padding: 8px 20px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+
+.download-cv .cv-inner-button:hover {
+  background: #ec4899;
+}
+
+/* Image Section */
+.heroImageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .heroImageContainer {
+    margin-top: 0;
+  }
+}
+
+.imageWrapper {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

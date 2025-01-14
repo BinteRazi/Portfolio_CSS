@@ -1,0 +1,40 @@
+/* Base Styling for Transition Layers */
+.transitionLayer {
+  position: fixed;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  bottom: 100%;
+  z-index: 10;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Layer 1 */
+.layer1 {
+  background-color: #1e293b; 
+  z-index: 30;
+}
+
+/* Layer 2 */
+.layer2 {
+  background-color: #111827; 
+  z-index: 20;
+}
+
+/* Layer 3 */
+.layer3 {
+  background-color: #1e293b; 
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .transitionLayer {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .layer1, .layer2, .layer3 {
+    background-color: #333; 
+  }
+}

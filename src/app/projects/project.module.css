@@ -1,0 +1,149 @@
+/* General Container Styling */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+  background-color: #1e293b;
+  color: white;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 2rem; 
+  font-weight: bold;
+  background: linear-gradient(to bottom right, #3b82f6, #ec4899, #6b7280); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: #d1d5db; 
+  margin-top: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Grid Styling */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px 16px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Project Card Styling */
+.projectCard {
+  width: 100%;
+  max-width: 100%; /* Ensure card width is fluid */
+  cursor: pointer;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: perspective(1000px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard.flipped {
+  transform: rotateY(180deg);
+}
+
+.projectCardimage {
+  width: 100%;
+  height: 16rem; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.projectCardback {
+  width: 100%; 
+  height: 16rem; 
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.projectCardback h1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.projectCardback p {
+  color: #b0bec5;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.projectCardback .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectCardback .tag {
+  padding: 0.25rem 0.5rem;
+  background-color: #1f2937;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+
+  .projectCardimage {
+    height: 12rem; 
+  }
+
+  .projectCardback {
+    height: 12rem;
+  }
+
+  .projectCardback h1 {
+    font-size: 1rem;
+  }
+
+  .projectCardback p {
+    font-size: 0.75rem;
+  }
+
+  .projectCardback .tag {
+    font-size: 0.625rem;
+  }
+}

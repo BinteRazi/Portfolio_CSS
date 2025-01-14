@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import styles from "../module/NavBar.module.css";
 
@@ -15,9 +15,11 @@ const NavBar = () => {
       {/* Logo Section */}
       <div className={styles.logoSection}>
         <div className={styles.logoWrapper}>
-          <img
+          <Image
             src="/images/logo.png"
             alt="Company logo"
+            width={40}
+            height={40} 
             className={styles.logoImage}
           />
         </div>
@@ -36,10 +38,12 @@ const NavBar = () => {
       {/* Social Icons */}
       <div className={styles.socialIconsContainer}>
         {Socials.map((social) => (
-          <img
+          <Image
             key={social.name}
             src={social.src}
             alt={`${social.name} icon`}
+            width={28}
+            height={28}
             className={styles.socialIcon}
           />
         ))}

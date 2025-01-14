@@ -11,7 +11,7 @@ const HeroSection = () => {
             <span className={styles.gradientText}>Hello, I am </span> Nimra Razi
           </h1>
           <p className={styles.heroDescription}>
-            "A passionate web developer skilled with modern frameworks and cutting-edge technologies."
+            A passionate web developer skilled with modern frameworks and cutting-edge technologies.
           </p>
           <div className={styles.heroButtons}>
             <button className={`${styles.button} ${styles.hireMe}`}>Hire Me</button>
